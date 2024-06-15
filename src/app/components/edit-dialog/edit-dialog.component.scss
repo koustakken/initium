@@ -1,0 +1,9 @@
+.mdc-dialog__content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mat-mdc-dialog-actions {
+  justify-content: end;
+}

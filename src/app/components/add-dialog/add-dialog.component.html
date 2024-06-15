@@ -1,0 +1,57 @@
+<mat-dialog-content [formGroup]="userForm">
+  <p mat-dialog-title>Редактирование</p>
+  <mat-form-field>
+    <mat-label>Имя</mat-label>
+    <input matInput formControlName="name" />
+    <mat-error *ngIf="userForm.get('name')?.hasError('required')">
+      Имя обязательно для заполнения
+    </mat-error>
+    <mat-error *ngIf="userForm.get('name')?.hasError('minlength')">
+      Имя должно быть не менее 2 символов
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Фамилия</mat-label>
+    <input matInput formControlName="surname" />
+    <mat-error *ngIf="userForm.get('surname')?.hasError('required')">
+      Фамилия обязательно для заполнения
+    </mat-error>
+    <mat-error *ngIf="userForm.get('surname')?.hasError('minlength')">
+      Фамилия должна быть не менее 2 символов
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>E-mail</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error
+      *ngIf="
+        userForm.get('email')?.invalid &&
+        (userForm.get('email')?.dirty || userForm.get('email')?.touched)
+      "
+    >
+      Некорректный адрес
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Телефон</mat-label>
+    <input matInput formControlName="phone" />
+    <mat-error
+      *ngIf="
+        userForm.get('phone')?.invalid &&
+        (userForm.get('phone')?.dirty || userForm.get('phone')?.touched)
+      "
+    >
+      Некорректный номер телефона
+    </mat-error>
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Отмена</button>
+    <button
+      mat-raised-button
+      (click)="onConfirm()"
+      [disabled]="userForm.invalid"
+    >
+      Сохранить
+    </button>
+  </mat-dialog-actions>
+</mat-dialog-content>

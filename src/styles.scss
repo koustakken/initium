@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100%;
+  background: #e9f3ff;
+}
+.mat-typography h1 {
+  color: #2f7fd5;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32.81px;
+  padding-left: 12px;
+}
+.mat-sort-header-content {
+  color: #2f4c97;
+}
+.mdc-dialog__content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  min-width: 448px;
+}
+.mat-mdc-dialog-actions {
+  justify-content: end;
+}
+.mdc-button {
+  color: #2f67d5 !important;
+}
+.mat-mdc-raised-button {
+  color: #fff !important;
+  background-color: #2f67d5 !important;
+  padding: 16px 22px !important;
+  border-radius: 37px !important;
+
+  &:disabled {
+    background-color: #d8dee9 !important;
+  }
+}
+:root {
+  --mdc-checkbox-selected-icon-color: #4a95f7;
+  --mdc-checkbox-selected-focus-icon-color: #4a95f7;
+  --mdc-checkbox-selected-pressed-icon-color: #4a95f7;
+  --mdc-checkbox-selected-focus-state-layer-color: #4a95f7;
+  --mdc-checkbox-selected-hover-state-layer-color: #4a95f7;
+  --mdc-checkbox-selected-pressed-state-layer-color: #4a95f7;
+  --mdc-checkbox-selected-hover-icon-color: #4a95f7;
+
+  --mdc-text-button-label-text-color: #2f67d5;
+}
